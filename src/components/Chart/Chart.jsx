@@ -2,6 +2,8 @@ import React,{ useState,useEffect } from 'react';
 import { fetchDailyData } from '../../api';
 import { Line, Bar } from 'react-chartjs-2';
 
+import styles from './Chart.module.css';
+
 const Chart = () =>{
     const [dailyData, setDailyData] = useState([]);
 
@@ -24,7 +26,7 @@ const Chart = () =>{
                         borderColor: '#3333ff',
                         fill: true,
                     }, {
-                        data: dailyData.map(({confirmed}) => confirmed),
+                        data: dailyData.map(({deaths}) => deaths),
                         label: 'Deaths',
                         borderColor: 'red',
                         backgroundColor: 'rgba(225,0,0)',
@@ -36,7 +38,7 @@ const Chart = () =>{
         
     )
     return (
-        <div className={StyleSheet.container}>
+        <div className={styles.container}>
             {LineChart}
         </div>
     );
