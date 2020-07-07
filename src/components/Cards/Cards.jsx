@@ -23,7 +23,7 @@ const Cards = ({ data: { confirmed,recovered,deaths,lastUpdate, }}) => {
                         />
                         </Typography>
                         <Typography color='textSecondary'>{new Date(lastUpdate).toDateString()}</Typography>
-                        <Typography variant='body2'>{(confirmed.value*100/7600000000).toFixed(2)} % world population infected</Typography>
+                        <Typography variant='body2'>World Population infected {(confirmed.value*100/7600000000).toFixed(2)} %</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.recovered)}>
@@ -38,7 +38,7 @@ const Cards = ({ data: { confirmed,recovered,deaths,lastUpdate, }}) => {
                         />
                         </Typography>
                         <Typography color='textSecondary'>{new Date(lastUpdate).toDateString()}</Typography>
-                        <Typography variant='body2'>Recovery Rate {recovered.value*100/confirmed.value}</Typography>
+                        <Typography variant='body2'>Overall Recovery Rate {(recovered.value*100/confirmed.value).toFixed(2)} %</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.deaths)}>
@@ -53,7 +53,7 @@ const Cards = ({ data: { confirmed,recovered,deaths,lastUpdate, }}) => {
                         />
                         </Typography>
                         <Typography color='textSecondary'>{new Date(lastUpdate).toDateString()}</Typography>
-                        <Typography variant='body2'>Mortality Rate {deaths.value*100/confirmed.value}</Typography>
+                        <Typography variant='body2'>Overall Mortality Rate {(deaths.value*100/confirmed.value).toFixed(2)} %</Typography>
                     </CardContent>
                 </Grid>
             </Grid>
