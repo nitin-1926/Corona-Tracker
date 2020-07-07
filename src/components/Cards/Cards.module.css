@@ -4,7 +4,7 @@
 
 .card{
     margin: 0 2% !important;
-    width: 250px !important;
+    max-width: 250px !important;
 }
 
 .infected{
@@ -17,6 +17,13 @@
 
 .deaths{
     border-bottom: 10px solid rgba(255,0,0);
+}
+
+.analyticsText{
+    font-weight: 400 !important;
+}
+.analyticsNumber{
+    font-size: 18px;
 }
 
 @media (max-width: 770px) {
