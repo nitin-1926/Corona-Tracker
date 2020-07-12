@@ -4,7 +4,7 @@
 
 .card{
     margin: 0 2% !important;
-    max-width: 250px !important;
+    width: 280px !important;
 }
 
 .infected{
@@ -20,9 +20,11 @@
 }
 
 .analyticsText{
+    display: none;
     font-weight: 400 !important;
 }
 .analyticsNumber{
+    display: none;
     font-size: 18px;
 }
 
